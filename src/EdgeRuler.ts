@@ -13,14 +13,14 @@ function nextEdge(e: number){ return (e % 3 === 2) ? e - 2 : e + 1; }
 function prevEdge(e: number){ return (e % 3 === 0) ? e + 2 : e - 1; }
 
 /**
- * Constrain a triangulation from Delaunator, using (parts of) the algorithm
+ * Rule a triangulation from Delaunator, using (parts of) the algorithm
  * in "A fast algorithm for generating constrained Delaunay triangulations" by
  * S. W. Sloan.
  */
-class Constrainautor {
+class EdgeRuler {
     /**
      * @member del The triangulation object from Delaunator, which will be 
-     * moddified by Constrainautor.
+     * moddified by EdgeRuler.
      */
     public del: DelaunatorLike;
     vertMap: Uint32Array;
@@ -29,7 +29,7 @@ class Constrainautor {
     consd: BitSet;
     
     /**
-     * Make a Constrainautor.
+     * Make a EdgeRuler.
      *
      * @param del The triangulation output from Delaunator.
      * @param edges If provided, constrain these edges as by constrainAll.
@@ -580,7 +580,7 @@ class Constrainautor {
 /**
  * Compute if two line segments [p1, p2] and [p3, p4] intersect.
  *
- * @name Constrainautor.intersectSegments
+ * @name EdgeRuler.intersectSegments
  * @source https://github.com/mikolalysenko/robust-segment-intersect
  * @param p1x The x coordinate of point 1 of the first segment.
  * @param p1y The y coordinate of point 1 of the first segment.
@@ -617,4 +617,4 @@ function intersectSegments(p1x: number, p1y: number, p2x: number, p2y: number,
     return true;
 }
 
-export default Constrainautor;
+export default EdgeRuler;

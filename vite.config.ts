@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        'Constrainautor': './src/Constrainautor.ts',
+        'EdgeRuler': './src/EdgeRuler.ts',
         'BitSet': './src/BitSet.ts'
       },
       formats: ['es', 'cjs'],

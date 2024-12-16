@@ -1,5 +1,5 @@
 // tests/validators.ts
-import Constrainautor, { DelaunatorLike } from '../src/Constrainautor';
+import Constrainautor, { DelaunatorLike } from '../src/EdgeRuler';
 import {incircle, orient2d} from 'robust-predicates';
 import robustIntersect from 'robust-segment-intersect';
 
@@ -301,6 +301,6 @@ export function validateAllConstraints(points: PTS, edges: [number, number][], c
     }
 }
 
-export type { DelaunatorLike } from '../src/Constrainautor';
+export type { DelaunatorLike } from '../src/EdgeRuler';
 export type { P2, PTS };
 export { SetMap };
