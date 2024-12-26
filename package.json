@@ -24,14 +24,15 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@types/delaunator": "^3.0.0",
     "@types/node": "^20.11.16",
     "@vitest/coverage-v8": "^1.2.2",
+    "delaunator": "^5.0.0",
+    "robust-segment-intersect": "^1.0.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-dts": "^3.7.2",
-    "vitest": "^1.2.2",
-    "delaunator": "^5.0.0",
-    "@types/delaunator": "^3.0.0"
+    "vitest": "^1.2.2"
   },
   "dependencies": {
     "robust-predicates": "^3.0.1"
