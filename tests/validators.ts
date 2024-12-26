@@ -1,4 +1,3 @@
-// tests/validators.ts
 import Constrainautor, { DelaunatorLike } from '../src/EdgeRuler';
 import {incircle, orient2d} from 'robust-predicates';
 import robustIntersect from 'robust-segment-intersect';
