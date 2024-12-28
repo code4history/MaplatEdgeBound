@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { BitSet8, BitSet16, BitSet32 } from '../src/BitSet';
-import type { BitSet } from '../src/BitSet';
+import { BitSet8, BitSet16, BitSet32 } from '../src/common/bitset';
+import type { BitSet } from '../src/common/bitset';
 
 function checkEmpty(bs: BitSet, size: number) {
   for (let i = 0; i < size; i++) {

@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import Constrainautor from '../src/EdgeRuler';
-const { intersectSegments } = Constrainautor;
+import { intersectSegments } from '../src/common/base';
 
 type P2 = [number, number];
 type P2x4 = [P2, P2, P2, P2];
