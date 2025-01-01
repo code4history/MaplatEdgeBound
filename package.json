@@ -6,14 +6,14 @@
   "type": "module",
   "main": "./dist/edgeruler.cjs",
   "module": "./dist/edgeruler.js",
-  "browser": "./dist/edgeruler.umd.cjs",
-  "types": "./dist/index.d.ts",
+  "browser": "./dist/edgeruler.umd.js",
+  "types": "./dist/constrain.d.ts",
   "exports": {
     ".": {
       "import": "./dist/edgeruler.js",
       "require": "./dist/edgeruler.cjs",
-      "browser": "./dist/edgeruler.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "browser": "./dist/edgeruler.umd.js",
+      "types": "./dist/constrain.d.ts"
     }
   },
   "files": [
@@ -27,31 +27,43 @@
     "deploy": "cp public/*.html ./ && tsc && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src tests",
+    "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "delaunator": "^5.0.0",
-    "robust-predicates": "^3.0.1"
-  },
-  "devDependencies": {
-    "@types/delaunator": "^5.0.0",
-    "@types/node": "^22.10.2",
-    "@vitest/coverage-v8": "^1.2.2",
-    "jsdom": "^25.0.1",
-    "robust-segment-intersect": "^1.0.1",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.12",
-    "vite-plugin-dts": "^3.7.2",
-    "vitest": "^1.2.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code4history/MaplatEdgeRuler.git"
   },
   "author": "Code for History",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/code4history/EdgeRuler.git"
-  },
   "bugs": {
-    "url": "https://github.com/code4history/EdgeRuler/issues"
+    "url": "https://github.com/code4history/MaplatEdgeRuler/issues"
   },
-  "homepage": "https://github.com/code4history/EdgeRuler#readme"
+  "homepage": "https://github.com/code4history/MaplatEdgeRuler#readme",
+  "keywords": [ "triangulation", "GIS", "Maplat", "Delaunator", "edge", "constrain" ],
+  "peerDependencies": {
+    "delaunator": "^5.0.0"
+  },
+  "dependencies": {
+    "robust-predicates": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/delaunator": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "robust-segment-intersect": "^1.0.1",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^1.6.0"
+  }
 }

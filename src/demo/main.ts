@@ -1,5 +1,5 @@
 import { DelaunayCanvas } from './delaunayCanvas';
-import { OriginalDelaunayCanvas } from './originalDelaunayCanvas';
+//import { OriginalDelaunayCanvas } from './originalDelaunayCanvas';
 import { Point } from './types';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -18,7 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 const canvasSize = { width: 400, height: 400 };
 const canvases: any[] = [];
 
-function createCanvas(name: string): HTMLCanvasElement {
+function createCanvas(_name: string): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   canvas.width = canvasSize.width;
   canvas.height = canvasSize.height;

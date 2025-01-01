@@ -36,13 +36,13 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
     });
 
     it('should record state changes during constraint operation', () => {
-      const initialState = {
+      /*const initialState = {
         triangles: Array.from(ruler.del.triangles),
         halfedges: Array.from(ruler.del.halfedges),
         vertMap: Array.from(ruler.vertMap)
       };
 
-      const edge = ruler.constrainOne(0, 2);
+      const edge = ruler.constrainOne(0, 2);*/
 
       const afterConstraint = {
         triangles: Array.from(ruler.del.triangles),

@@ -10,10 +10,18 @@ export default defineConfig({
         url: 'http://localhost'
       }
     },
-    include: ['tests/**/*.test.ts'],
+    include: ['tests/**/*.test.{ts,js}'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html']
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'node_modules/**',
+        'dist/**',
+        '**/*.d.ts',
+        'tests/**',
+        'vite.config.ts',
+        'vitest.config.ts'
+      ]
     }
   },
   resolve: {

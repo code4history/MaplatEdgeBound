@@ -6,8 +6,8 @@ export class DelaunayCanvas implements TriangulationStrategy {
   private points: Point[] = [];
   private width: number;
   private height: number;
-  private pointsArray: Float64Array | number[] = [];
-  private delaunay: Delaunator<number> | null = null;
+  private pointsArray: ArrayLike<number> = [];
+  private delaunay: Delaunator<ArrayLike<number>> | null = null;
   name: string;
 
   constructor(canvas: HTMLCanvasElement, name: string) {

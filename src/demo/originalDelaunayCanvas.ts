@@ -96,7 +96,7 @@ export class OriginalDelaunayCanvas implements TriangulationStrategy {
 
   benchmark(): number {
     const start = performance.now();
-    const visibleTriangles = this.getVisibleTriangles();
+    //const visibleTriangles = this.getVisibleTriangles();
     const end = performance.now();
     return end - start;
   }

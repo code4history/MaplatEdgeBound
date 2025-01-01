@@ -1,4 +1,4 @@
-import {orient2d, incircle} from 'robust-predicates';
+import {orient2d} from 'robust-predicates';
 
 export interface DelaunatorLike {
   coords: {readonly length: number, readonly [n: number]: number};

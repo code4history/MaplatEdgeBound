@@ -10,19 +10,19 @@ export default defineConfig({
   base: './',
   build: isPackageBuild ? {
     lib: {
-      entry: resolve(process.cwd(), 'src/index.ts'),
+      entry: resolve(__dirname, 'src/variant/constrain.ts'),
       formats: ['es', 'cjs', 'umd'],
-      name: 'edgeruler',
+      name: 'maplat_edgeruler',
       fileName: (format, entryName) => {
         switch(format) {
           case 'es':
-            return 'edgeruler.js';
+            return 'maplat_edgeruler.js';
           case 'cjs':
-            return 'edgeruler.cjs';
+            return 'maplat_edgeruler.cjs';
           case 'umd':
-            return 'edgeruler.umd.cjs';
+            return 'maplat_edgeruler.umd.js';
           default:
-            return 'edgeruler.js';
+            return 'maplat_edgeruler.js';
         }
       }
     }
@@ -40,7 +40,18 @@ export default defineConfig({
       }
     }
   },
-  plugins: [dts()],
+  plugins: [
+    dts({
+      outDir: 'dist',
+      exclude: ['tests'],
+      rollupTypes: true
+    })
+  ],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./test/setup.ts']
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
