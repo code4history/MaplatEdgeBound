@@ -44,7 +44,7 @@ Maplat EdgeRulerをインストールする前に、以下の前提ライブラ�
 
 ```typescript
 import Delaunator from "delaunator";
-import Constrain from "@maplat/edgeruler";
+import EdgeRuler from "@maplat/edgeruler";
 
 // 点群データの定義
 const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
@@ -53,7 +53,7 @@ const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
 const del = Delaunator.from(points);
 
 // 制約付き三角網の生成
-const con = new Constrain(del);
+const con = new EdgeRuler(del);
 
 // 必須エッジの追加（例：頂点0と頂点2を結ぶエッジ）
 con.constrainOne(0, 2);

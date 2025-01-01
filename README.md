@@ -44,7 +44,7 @@ Before installing Maplat EdgeRuler, you need to load the following prerequisite 
 
 ```typescript
 import Delaunator from "delaunator";
-import Constrain from "@maplat/edgeruler";
+import EdgeRuler from "@maplat/edgeruler";
 
 // Define point data
 const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
@@ -53,7 +53,7 @@ const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
 const del = Delaunator.from(points);
 
 // Create constrained triangulation
-const con = new Constrain(del);
+const con = new EdgeRuler(del);
 
 // Add a required edge (e.g., connecting vertex 0 and vertex 2)
 con.constrainOne(0, 2);
