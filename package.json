@@ -4,18 +4,18 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "type": "module",
-  "main": "./dist/edgeruler.cjs",
-  "module": "./dist/edgeruler.js",
-  "browser": "./dist/edgeruler.umd.js",
+  "main": "./dist/maplat_edgeruler.cjs",
+  "module": "./dist/maplat_edgeruler.js",
+  "browser": "./dist/maplat_edgeruler.umd.js",
   "types": "./dist/constrain.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/edgeruler.js",
-      "require": "./dist/edgeruler.cjs",
-      "browser": "./dist/edgeruler.umd.js",
+      "import": "./dist/maplat_edgeruler.js",
+      "require": "./dist/maplat_edgeruler.cjs",
+      "browser": "./dist/maplat_edgeruler.umd.js",
       "types": "./dist/constrain.d.ts"
     }
   },
