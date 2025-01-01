@@ -162,26 +162,26 @@ exports[`EdgeRuler Integration-Based Unit Tests > State Transitions > should mai
 exports[`EdgeRuler Integration-Based Unit Tests > State Transitions > should record state changes during constraint operation > state-after-constraint 1`] = `
 {
   "halfedges": [
+    5,
     -1,
     -1,
-    4,
     -1,
-    2,
     -1,
+    0,
   ],
   "triangles": [
-    2,
+    1,
     3,
     0,
     1,
     2,
-    0,
+    3,
   ],
   "vertMap": [
     1,
-    5,
+    2,
     3,
-    0,
+    4,
   ],
 }
 `;

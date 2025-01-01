@@ -8,7 +8,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import EdgeRuler from '../src/variant/constrain';
 import Delaunator from 'delaunator';
-import type { DelaunatorLike } from '../src/variant/constrain';
+import DelaunatorLike from '../src/variant/constrain';
 
 // 型定義を追加
 interface EdgeState {
