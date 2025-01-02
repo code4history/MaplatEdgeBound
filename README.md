@@ -40,7 +40,7 @@ Before installing Maplat EdgeRuler, you need to load the following prerequisite 
 
 ## Usage
 
-### Required Edge Constraints (v0.1.0)
+### Required Edge Constraints (v0.1.2)
 
 ```typescript
 import Delaunator from "delaunator";

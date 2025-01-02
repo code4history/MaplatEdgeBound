@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "type": "module",
   "main": "./dist/maplat_edgeruler.cjs",
@@ -44,7 +44,14 @@
     "url": "https://github.com/code4history/MaplatEdgeRuler/issues"
   },
   "homepage": "https://github.com/code4history/MaplatEdgeRuler#readme",
-  "keywords": [ "triangulation", "GIS", "Maplat", "Delaunator", "edge", "constrain" ],
+  "keywords": [
+    "triangulation",
+    "GIS",
+    "Maplat",
+    "Delaunator",
+    "edge",
+    "constrain"
+  ],
   "peerDependencies": {
     "delaunator": "^5.0.0"
   },
@@ -55,9 +62,10 @@
     "@eslint/js": "^9.17.0",
     "@types/delaunator": "^5.0.0",
     "@types/node": "^22.10.2",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@types/robust-segment-intersect": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2",
+    "@vitest/coverage-v8": "^1.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",

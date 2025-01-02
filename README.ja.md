@@ -40,7 +40,7 @@ Maplat EdgeRulerをインストールする前に、以下の前提ライブラ�
 
 ## 使い方
 
-### 必須エッジ制約 (v0.1.0)
+### 必須エッジ制約 (v0.1.2)
 
 ```typescript
 import Delaunator from "delaunator";

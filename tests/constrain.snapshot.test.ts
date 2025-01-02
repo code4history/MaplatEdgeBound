@@ -8,7 +8,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import EdgeRuler from '../src/variant/constrain';
 import Delaunator from 'delaunator';
-import DelaunatorLike from '../src/variant/constrain';
 
 // 型定義を追加
 interface EdgeState {
@@ -28,7 +27,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
   
   describe('State Transitions', () => {
     let ruler: EdgeRuler;
-    let del: DelaunatorLike;
+    let del: any;
     
     beforeEach(() => {
       del = Delaunator.from(samplePoints);
