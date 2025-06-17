@@ -25,6 +25,31 @@ npm install @maplat/edgeruler
 npm install delaunator
 ```
 
+### JSR (JavaScript Registry)
+
+```sh
+# For Deno
+deno add @maplat/edge-ruler
+
+# For npm/Node.js
+npx jsr add @maplat/edge-ruler
+npm install delaunator  # peer dependency
+```
+
+### Deno
+
+```typescript
+import EdgeRuler from "https://deno.land/x/maplat_edgeruler/mod.ts";
+// or from a specific version
+// import EdgeRuler from "https://deno.land/x/maplat_edgeruler@v0.2.0/mod.ts";
+```
+
+Note: The project includes a `deno.json` configuration file with import maps for dependencies. If you're using the module directly from source, you can also use the separate `import_map.json`:
+
+```bash
+deno run --import-map=import_map.json your_script.ts
+```
+
 ### Browser
 
 Before installing Maplat EdgeRuler, you need to load the following prerequisite library:
@@ -35,12 +60,12 @@ Before installing Maplat EdgeRuler, you need to load the following prerequisite 
 
 
 <!-- Then load Maplat EdgeRuler -->
-<script src="https://unpkg.com/@maplat/tin/dist/maplat_edgeruler.umd.js"></script>
+<script src="https://unpkg.com/@maplat/edgeruler/dist/maplat_edgeruler.umd.js"></script>
 ```
 
 ## Usage
 
-### Required Edge Constraints (v0.1.2)
+### Required Edge Constraints (v0.2.0)
 
 ```typescript
 import Delaunator from "delaunator";

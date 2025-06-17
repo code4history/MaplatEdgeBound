@@ -16,7 +16,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `;
 
 const canvasSize = { width: 400, height: 400 };
-const canvases: any[] = [];
+const canvases: DelaunayCanvas[] = [];
 
 function createCanvas(_name: string): HTMLCanvasElement {
   const canvas = document.createElement('canvas');

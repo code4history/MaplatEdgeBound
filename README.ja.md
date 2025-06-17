@@ -25,6 +25,31 @@ npm install @maplat/edgeruler
 npm install delaunator
 ```
 
+### JSR (JavaScript Registry)
+
+```sh
+# Deno向け
+deno add @maplat/edge-ruler
+
+# npm/Node.js向け
+npx jsr add @maplat/edge-ruler
+npm install delaunator  # ピア依存関係
+```
+
+### Deno
+
+```typescript
+import EdgeRuler from "https://deno.land/x/maplat_edgeruler/mod.ts";
+// または特定のバージョンから
+// import EdgeRuler from "https://deno.land/x/maplat_edgeruler@v0.2.0/mod.ts";
+```
+
+注意: プロジェクトには依存関係のインポートマップを含む`deno.json`設定ファイルが含まれています。ソースから直接モジュールを使用する場合は、別の`import_map.json`も使用できます：
+
+```bash
+deno run --import-map=import_map.json your_script.ts
+```
+
 ### ブラウザ
 
 Maplat EdgeRulerをインストールする前に、以下の前提ライブラリを読み込んでおく必要があります。
@@ -35,12 +60,12 @@ Maplat EdgeRulerをインストールする前に、以下の前提ライブラ�
 
 
 <!-- そしてMaplat EdgeRulerをロード -->
-<script src="https://unpkg.com/@maplat/tin/dist/maplat_edgeruler.umd.js"></script>
+<script src="https://unpkg.com/@maplat/edgeruler/dist/maplat_edgeruler.umd.js"></script>
 ```
 
 ## 使い方
 
-### 必須エッジ制約 (v0.1.2)
+### 必須エッジ制約 (v0.2.0)
 
 ```typescript
 import Delaunator from "delaunator";

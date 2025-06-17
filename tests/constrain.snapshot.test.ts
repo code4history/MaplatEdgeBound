@@ -27,7 +27,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
   
   describe('State Transitions', () => {
     let ruler: EdgeRuler;
-    let del: any;
+    let del: Delaunator<Float64Array>;
     
     beforeEach(() => {
       del = Delaunator.from(samplePoints);
