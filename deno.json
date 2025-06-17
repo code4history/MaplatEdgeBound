@@ -2,9 +2,10 @@
   "name": "@maplat/edge-ruler",
   "version": "0.2.0",
   "exports": "./mod.ts",
+  "license": "MIT",
   "imports": {
     "@/": "./src/",
-    "robust-predicates": "https://esm.sh/robust-predicates@3.0.2"
+    "robust-predicates": "npm:robust-predicates@3.0.2"
   },
   "tasks": {
     "test": "deno test",

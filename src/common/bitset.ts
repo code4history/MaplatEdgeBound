@@ -18,7 +18,7 @@ abstract class BitSet {
    * @param idx The number to add. Must be 0 <= idx < len.
    * @return this.
    */
-  add(idx: number){
+  add(idx: number): this {
     const W = this.W,
       byte = (idx / W) | 0,
       bit = idx % W;
@@ -32,7 +32,7 @@ abstract class BitSet {
    * @param idx The number to delete. Must be 0 <= idx < len.
    * @return this.
    */
-  delete(idx: number){
+  delete(idx: number): this {
     const W = this.W,
       byte = (idx / W) | 0,
       bit = idx % W;
@@ -47,7 +47,7 @@ abstract class BitSet {
    * @param val If true, add the number, otherwise delete.
    * @return val.
    */
-  set(idx: number, val: boolean){
+  set(idx: number, val: boolean): boolean {
     const W = this.W,
       byte = (idx / W) | 0,
       bit = idx % W,
@@ -63,7 +63,7 @@ abstract class BitSet {
    * @param idx The number to test. Must be 0 <= idx < len.
    * @return True if the number is in the set.
    */
-  has(idx: number){
+  has(idx: number): boolean {
     const W = this.W,
       byte = (idx / W) | 0,
       bit = idx % W;
@@ -80,7 +80,7 @@ abstract class BitSet {
    * @param fn The function to call for each number.
    * @return this.
    */
-  forEach(fn: (idx: number) => void){
+  forEach(fn: (idx: number) => void): this {
     const W = this.W,
       bs = this.bs,
       len = bs.length;

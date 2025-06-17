@@ -1,5 +1,5 @@
 /* Originally based on @kninnug/constrainautor 4.0.0 https://github.com/kninnug/Constrainautor/ */
-import {orient2d, incircle} from 'robust-predicates';
+import {orient2d, incircle} from 'npm:robust-predicates@3.0.2';
 import {BitSet8} from './src/common/bitset.ts';
 import {nextEdge, prevEdge, Base, DelaunatorLike, intersectSegments as baseIntersectSegments} from './src/common/base.ts';
 import type {BitSet} from './src/common/bitset.ts';
@@ -54,7 +54,7 @@ class Constrain extends Base {
   /**
    * Constrain the triangulation such that there is an edge between p1 and p2.
    */
-  constrainOne(segP1: number, segP2: number) {
+  constrainOne(segP1: number, segP2: number): number {
     const {triangles, halfedges} = this.del;
     const start = this.vertMap[segP1];
     
@@ -174,7 +174,7 @@ class Constrain extends Base {
   /**
    * Fix the Delaunay condition.
    */
-  delaunify(deep = false) {
+  delaunify(deep = false): void {
     const {halfedges} = this.del;
     const flips = this.flips;
     const consd = this.consd;
@@ -207,7 +207,7 @@ class Constrain extends Base {
   /**
    * Call constrainOne on each edge
    */
-  constrainAll(edges: readonly [number, number][]) {
+  constrainAll(edges: readonly [number, number][]): void {
     const len = edges.length;
     for(let i = 0; i < len; i++) {
       const e = edges[i];
@@ -220,7 +220,7 @@ class Constrain extends Base {
   /**
    * Whether an edge is constrained
    */
-  isConstrained(edg: number) {
+  isConstrained(edg: number): boolean {
     return this.consd.has(edg);
   }
   
@@ -228,7 +228,7 @@ class Constrain extends Base {
    * Find the edge that points from p1 -> p2. If there is only an edge from
    * p2 -> p1 (i.e. it is on the hull), returns the negative id of it.
    */
-  findEdge(p1: number, p2: number) {
+  findEdge(p1: number, p2: number): number {
     const start1 = this.vertMap[p2];
     const {triangles, halfedges} = this.del;
     let edg = start1,
@@ -411,7 +411,7 @@ class Constrain extends Base {
   /**
    * Whether the segments between vertices intersect
    */
-  protected intersectSegments(p1: number, p2: number, p3: number, p4: number) {
+  protected intersectSegments(p1: number, p2: number, p3: number, p4: number): boolean {
     const pts = this.del.coords;
     if(p1 === p3 || p1 === p4 || p2 === p3 || p2 === p4) {
       return false;

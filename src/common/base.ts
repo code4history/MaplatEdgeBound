@@ -14,7 +14,7 @@ export function prevEdge(e: number){ return (e % 3 === 0) ? e + 2 : e - 1; }
  * Compute if two line segments [p1, p2] and [p3, p4] intersect
  */
 export function intersectSegments(p1x: number, p1y: number, p2x: number, p2y: number,
-    p3x: number, p3y: number, p4x: number, p4y: number) {
+    p3x: number, p3y: number, p4x: number, p4y: number): boolean {
   const x0 = orient2d(p1x, p1y, p3x, p3y, p4x, p4y),
     y0 = orient2d(p2x, p2y, p3x, p3y, p4x, p4y);
   if((x0 > 0 && y0 > 0) || (x0 < 0 && y0 < 0)) {
