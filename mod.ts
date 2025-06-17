@@ -174,7 +174,7 @@ class Constrain extends Base {
   /**
    * Fix the Delaunay condition.
    */
-  delaunify(deep = false): void {
+  delaunify(deep = false): this {
     const {halfedges} = this.del;
     const flips = this.flips;
     const consd = this.consd;
@@ -207,7 +207,7 @@ class Constrain extends Base {
   /**
    * Call constrainOne on each edge
    */
-  constrainAll(edges: readonly [number, number][]): void {
+  constrainAll(edges: readonly [number, number][]): this {
     const len = edges.length;
     for(let i = 0; i < len; i++) {
       const e = edges[i];
