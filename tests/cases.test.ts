@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import Delaunator from 'delaunator';
-import Constrain from '../src/variant/constrain';
+import { Constrain } from '../src/variant/constrain';
 import { readdirSync, readFileSync, existsSync, statSync } from 'fs';
 import { join } from 'path';
 

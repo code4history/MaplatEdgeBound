@@ -7,9 +7,8 @@
  */
 
 // Main exports
-export { default as Constrain } from './variant/constrain';
-export { default } from './variant/constrain';
-export type { DelaunatorLike } from './common/base';
+export { Constrain } from './variant/constrain.ts';
+export type { DelaunatorLike } from './common/base.ts';
 
 // Future exports (v0.3.0):
 // export { someFunction } from './future/module.ts';

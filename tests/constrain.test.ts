@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import Constrainautor from '../src/variant/constrain';
+import { Constrain as Constrainautor } from '../src/variant/constrain';
 import Delaunator from 'delaunator';
 import { validateDelaunator, validateVertMap, validateConstraint, 
          validateFlips, validateAllConstraints, validateDelaunay } from './validators';

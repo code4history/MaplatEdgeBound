@@ -6,7 +6,7 @@
  * ユニットテストは edge-ruler.unit.test.ts にあります。
  */
 import { describe, it, expect, beforeEach } from 'vitest';
-import EdgeBound from '../src/variant/constrain';
+import { Constrain as EdgeBound } from '../src/variant/constrain';
 import Delaunator from 'delaunator';
 
 // 型定義を追加

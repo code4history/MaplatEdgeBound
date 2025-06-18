@@ -1,10 +1,10 @@
 /* Originally based on @kninnug/constrainautor 4.0.0 https://github.com/kninnug/Constrainautor/ */
 import {orient2d, incircle} from 'robust-predicates';
-import {BitSet8} from '../common/bitset';
-import {nextEdge, prevEdge, Base, DelaunatorLike, intersectSegments as baseIntersectSegments} from '../common/base';
-import type {BitSet} from '../common/bitset';
+import {BitSet8} from '../common/bitset.ts';
+import {nextEdge, prevEdge, Base, DelaunatorLike, intersectSegments as baseIntersectSegments} from '../common/base.ts';
+import type {BitSet} from '../common/bitset.ts';
 
-class Constrain extends Base {
+export class Constrain extends Base {
   vertMap: Uint32Array;
   flips: BitSet;
   consd: BitSet;
@@ -426,5 +426,3 @@ class Constrain extends Base {
 
   static intersectSegments = baseIntersectSegments;
 }
-
-export default Constrain;

@@ -1,4 +1,4 @@
-import Constrainautor from '../src/variant/constrain';
+import { Constrain as Constrainautor } from '../src/variant/constrain';
 import { DelaunatorLike } from '../src/common/base';
 import {incircle, orient2d} from 'robust-predicates';
 import robustIntersect from 'robust-segment-intersect';

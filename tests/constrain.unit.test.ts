@@ -1,6 +1,6 @@
 // edge-bound.unit.test.ts
 import { describe, it, expect, beforeEach } from 'vitest';
-import EdgeBound from '../src/variant/constrain';
+import { Constrain as EdgeBound } from '../src/variant/constrain';
 import Delaunator from 'delaunator';
 
 describe('EdgeBound Unit Tests', () => {

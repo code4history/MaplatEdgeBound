@@ -22,17 +22,19 @@
   "files": [
     "dist",
     "src",
-    "README.md"
+    "README.md",
+    "README.ja.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && cross-env BUILD_MODE=package vite build",
+    "build": "npm run typecheck && cross-env BUILD_MODE=package vite build",
+    "typecheck": "tsc --noEmit --allowImportingTsExtensions",
     "deploy": "cp public/*.html ./ && tsc && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint src tests",
-    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
     "version:bump": "node scripts/bump-version.js",
     "version:sync": "node scripts/sync-version.js",
