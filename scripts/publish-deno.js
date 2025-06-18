@@ -29,9 +29,8 @@ try {
   
   // Run deno publish with all passed arguments
   // Add --no-check and --allow-slow-types to skip strict type checking for now
-  // Add --allow-dirty for dry-run testing
-  const extraArgs = isDryRun ? '--allow-dirty' : '--allow-dirty';
-  const publishCommand = `deno publish --no-check --allow-slow-types ${extraArgs} ${args.join(' ')}`;
+  // Add --allow-dirty since we temporarily modify deno.json
+  const publishCommand = `deno publish --no-check --allow-slow-types --allow-dirty ${args.join(' ')}`;
   console.log(`Running: ${publishCommand}`);
   
   execSync(publishCommand, { stdio: 'inherit' });
