@@ -1,7 +1,7 @@
 {
-  "name": "@maplat/edge-ruler",
-  "version": "0.2.0",
-  "exports": "./mod.ts",
+  "name": "@maplat/edgeruler",
+  "version": "0.2.1",
+  "exports": "./src/index.ts",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "license": "MIT",
   "repository": {

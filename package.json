@@ -4,19 +4,19 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "type": "module",
   "main": "./dist/maplat_edgeruler.cjs",
   "module": "./dist/maplat_edgeruler.js",
   "browser": "./dist/maplat_edgeruler.umd.js",
-  "types": "./dist/constrain.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/maplat_edgeruler.js",
       "require": "./dist/maplat_edgeruler.cjs",
       "browser": "./dist/maplat_edgeruler.umd.js",
-      "types": "./dist/constrain.d.ts"
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
@@ -33,7 +33,15 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint src tests",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "version:bump": "node scripts/bump-version.js",
+    "version:sync": "node scripts/sync-version.js",
+    "publish:npm": "node scripts/publish-npm.js",
+    "publish:npm:dry": "node scripts/publish-npm.js --dry-run",
+    "publish:deno": "node scripts/publish-deno.js",
+    "publish:deno:dry": "node scripts/publish-deno.js --dry-run",
+    "publish:all": "node scripts/publish-all.js",
+    "publish:all:dry": "node scripts/publish-all.js --dry-run"
   },
   "repository": {
     "type": "git",

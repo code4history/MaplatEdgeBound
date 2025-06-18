@@ -1,7 +1,7 @@
 {
-  "name": "@maplat/edge-ruler",
-  "version": "0.2.0",
-  "exports": "./mod.ts",
+  "name": "@maplat/edgeruler",
+  "version": "0.2.1",
+  "exports": "./src/index.ts",
   "license": "MIT",
   "imports": {
     "@/": "./src/",
@@ -14,7 +14,10 @@
     "lint": "deno lint"
   },
   "compilerOptions": {
-    "lib": ["es2020", "dom"]
+    "lib": [
+      "es2020",
+      "dom"
+    ]
   },
   "fmt": {
     "useTabs": false,
@@ -25,7 +28,9 @@
   },
   "lint": {
     "rules": {
-      "tags": ["recommended"]
+      "tags": [
+        "recommended"
+      ]
     }
   }
 }

@@ -9,7 +9,7 @@ English README is [here](./README.md).
 - Delaunatorの出力に対して、エッジ制約を適用
 - 複数の制約タイプをサポート
   - 必須エッジ制約（v0.1.0で実装済み）
-  - 不許可エッジ制約（v0.2.0で実装予定）
+  - 不許可エッジ制約（v0.3.0で実装予定）
 - 高速なアルゴリズムと効率的なメモリ使用
 - TypeScriptで実装され、型定義を完備
 
@@ -29,10 +29,10 @@ npm install delaunator
 
 ```sh
 # Deno向け
-deno add @maplat/edge-ruler
+deno add @maplat/edgeruler
 
 # npm/Node.js向け
-npx jsr add @maplat/edge-ruler
+npx jsr add @maplat/edgeruler
 npm install delaunator  # ピア依存関係
 ```
 
@@ -65,7 +65,7 @@ Maplat EdgeRulerをインストールする前に、以下の前提ライブラ�
 
 ## 使い方
 
-### 必須エッジ制約 (v0.2.0)
+### 必須エッジ制約 (v0.1.0)
 
 ```typescript
 import Delaunator from "delaunator";
@@ -122,7 +122,7 @@ const constrainedDel = con.del;
 - ビットセット（BitSet）を活用して効率的なメモリ使用を実現
 - 制約付加による追加コストは通常10%未満
 
-### 将来の拡張予定 (v0.2.0)
+### 将来の拡張予定 (v0.3.0)
 
 ```typescript
 import Delaunator from "delaunator";

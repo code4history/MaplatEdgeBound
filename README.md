@@ -9,7 +9,7 @@ Maplat EdgeRuler is a library for generating constrained triangulations based on
 - Applies edge constraints to Delaunator output
 - Supports multiple constraint types:
   - Required edge constraints (implemented in v0.1.0)
-  - Forbidden edge constraints (planned for v0.2.0)
+  - Forbidden edge constraints (planned for v0.3.0)
 - Fast algorithm with efficient memory usage
 - Implemented in TypeScript with complete type definitions
 
@@ -29,10 +29,10 @@ npm install delaunator
 
 ```sh
 # For Deno
-deno add @maplat/edge-ruler
+deno add @maplat/edgeruler
 
 # For npm/Node.js
-npx jsr add @maplat/edge-ruler
+npx jsr add @maplat/edgeruler
 npm install delaunator  # peer dependency
 ```
 
@@ -65,7 +65,7 @@ Before installing Maplat EdgeRuler, you need to load the following prerequisite 
 
 ## Usage
 
-### Required Edge Constraints (v0.2.0)
+### Required Edge Constraints (v0.1.0)
 
 ```typescript
 import Delaunator from "delaunator";
@@ -122,7 +122,7 @@ This algorithm is based on the following paper:
 - Efficient memory usage through BitSet implementation
 - Additional cost for constraints typically less than 10%
 
-### Future Extensions (v0.2.0)
+### Future Extensions (v0.3.0)
 
 ```typescript
 import Delaunator from "delaunator";

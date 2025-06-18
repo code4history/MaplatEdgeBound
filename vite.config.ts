@@ -10,7 +10,7 @@ export default defineConfig({
   base: './',
   build: isPackageBuild ? {
     lib: {
-      entry: resolve(__dirname, 'src/variant/constrain.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs', 'umd'],
       name: 'maplat_edgeruler',
       fileName: (format, entryName) => {
