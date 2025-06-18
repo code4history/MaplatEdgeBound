@@ -1,4 +1,4 @@
-# EdgeRuler 拡張計画1
+# EdgeBound 拡張計画1
 
 ## ターゲットバージョン
 

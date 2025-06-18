@@ -12,17 +12,17 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs', 'umd'],
-      name: 'maplat_edgeruler',
+      name: 'maplat_edgebound',
       fileName: (format, entryName) => {
         switch(format) {
           case 'es':
-            return 'maplat_edgeruler.js';
+            return 'maplat_edgebound.js';
           case 'cjs':
-            return 'maplat_edgeruler.cjs';
+            return 'maplat_edgebound.cjs';
           case 'umd':
-            return 'maplat_edgeruler.umd.js';
+            return 'maplat_edgebound.umd.js';
           default:
-            return 'maplat_edgeruler.js';
+            return 'maplat_edgebound.js';
         }
       }
     }

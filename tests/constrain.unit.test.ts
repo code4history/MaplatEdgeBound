@@ -1,17 +1,17 @@
-// edge-ruler.unit.test.ts
+// edge-bound.unit.test.ts
 import { describe, it, expect, beforeEach } from 'vitest';
-import EdgeRuler from '../src/variant/constrain';
+import EdgeBound from '../src/variant/constrain';
 import Delaunator from 'delaunator';
 
-describe('EdgeRuler Unit Tests', () => {
+describe('EdgeBound Unit Tests', () => {
   // 基本的なテストデータ
   const basicPoints: [number, number][] = [[150, 50], [50, 200], [150, 350], [250, 200]];
   let del: Delaunator<Float64Array>;
-  let ruler: EdgeRuler;
+  let ruler: EdgeBound;
 
   beforeEach(() => {
     del = Delaunator.from(basicPoints);
-    ruler = new EdgeRuler(del);
+    ruler = new EdgeBound(del);
   });
 
   describe('findEdge', () => {

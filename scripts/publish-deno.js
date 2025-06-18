@@ -21,7 +21,7 @@ try {
   console.log('Syncing version across all files...');
   execSync('node scripts/sync-version.js', { stdio: 'inherit', cwd: rootDir });
   
-  // No local imports to update for MaplatEdgeRuler
+  // No local imports to update for MaplatEdgebound
   
   // Get command line arguments
   const args = process.argv.slice(2);

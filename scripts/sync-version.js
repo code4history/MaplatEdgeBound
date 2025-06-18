@@ -30,22 +30,22 @@ const filesToUpdate = [
     path: path.join(rootDir, 'README.md'),
     type: 'markdown',
     patterns: [
-      { regex: /npm install @maplat\/edge-ruler@[\d.]+/g, replacement: `npm install @maplat/edgeruler@${version}` },
-      { regex: /deno add @maplat\/edge-ruler@[\d.]+/g, replacement: `deno add @maplat/edgeruler@${version}` },
-      { regex: /npx jsr add @maplat\/edge-ruler@[\d.]+/g, replacement: `npx jsr add @maplat/edgeruler@${version}` },
-      { regex: /jsr:@maplat\/edge-ruler@[\d.]+/g, replacement: `jsr:@maplat/edgeruler@${version}` },
-      { regex: /npm:@maplat\/edge-ruler@[\d.]+/g, replacement: `npm:@maplat/edgeruler@${version}` }
+      { regex: /npm install @maplat\/edge-ruler@[\d.]+/g, replacement: `npm install @maplat/edgebound@${version}` },
+      { regex: /deno add @maplat\/edge-ruler@[\d.]+/g, replacement: `deno add @maplat/edgebound@${version}` },
+      { regex: /npx jsr add @maplat\/edge-ruler@[\d.]+/g, replacement: `npx jsr add @maplat/edgebound@${version}` },
+      { regex: /jsr:@maplat\/edge-ruler@[\d.]+/g, replacement: `jsr:@maplat/edgebound@${version}` },
+      { regex: /npm:@maplat\/edge-ruler@[\d.]+/g, replacement: `npm:@maplat/edgebound@${version}` }
     ]
   },
   {
     path: path.join(rootDir, 'README.ja.md'),
     type: 'markdown',
     patterns: [
-      { regex: /npm install @maplat\/edge-ruler@[\d.]+/g, replacement: `npm install @maplat/edgeruler@${version}` },
-      { regex: /deno add @maplat\/edge-ruler@[\d.]+/g, replacement: `deno add @maplat/edgeruler@${version}` },
-      { regex: /npx jsr add @maplat\/edge-ruler@[\d.]+/g, replacement: `npx jsr add @maplat/edgeruler@${version}` },
-      { regex: /jsr:@maplat\/edge-ruler@[\d.]+/g, replacement: `jsr:@maplat/edgeruler@${version}` },
-      { regex: /npm:@maplat\/edge-ruler@[\d.]+/g, replacement: `npm:@maplat/edgeruler@${version}` }
+      { regex: /npm install @maplat\/edge-ruler@[\d.]+/g, replacement: `npm install @maplat/edgebound@${version}` },
+      { regex: /deno add @maplat\/edge-ruler@[\d.]+/g, replacement: `deno add @maplat/edgebound@${version}` },
+      { regex: /npx jsr add @maplat\/edge-ruler@[\d.]+/g, replacement: `npx jsr add @maplat/edgebound@${version}` },
+      { regex: /jsr:@maplat\/edge-ruler@[\d.]+/g, replacement: `jsr:@maplat/edgebound@${version}` },
+      { regex: /npm:@maplat\/edge-ruler@[\d.]+/g, replacement: `npm:@maplat/edgebound@${version}` }
     ]
   }
 ];

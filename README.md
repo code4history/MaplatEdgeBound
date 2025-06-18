@@ -1,6 +1,6 @@
-# MaplatEdgeRuler
+# MaplatEdgebound
 
-Maplat EdgeRuler is a library for generating constrained triangulations based on [Delaunator](https://github.com/mapbox/delaunator).
+Maplat EdgeBound is a library for generating constrained triangulations based on [Delaunator](https://github.com/mapbox/delaunator).
 
 日本語のREADMEは[こちら](./README.ja.md)
 
@@ -19,7 +19,7 @@ Maplat EdgeRuler is a library for generating constrained triangulations based on
 
 ```sh
 # Install the main package
-npm install @maplat/edgeruler
+npm install @maplat/edgebound
 
 # Install the required peer dependency
 npm install delaunator
@@ -29,19 +29,19 @@ npm install delaunator
 
 ```sh
 # For Deno
-deno add @maplat/edgeruler
+deno add @maplat/edgebound
 
 # For npm/Node.js
-npx jsr add @maplat/edgeruler
+npx jsr add @maplat/edgebound
 npm install delaunator  # peer dependency
 ```
 
 ### Deno
 
 ```typescript
-import EdgeRuler from "https://deno.land/x/maplat_edgeruler/mod.ts";
+import EdgeBound from "https://deno.land/x/maplat_edgebound/mod.ts";
 // or from a specific version
-// import EdgeRuler from "https://deno.land/x/maplat_edgeruler@v0.2.0/mod.ts";
+// import EdgeBound from "https://deno.land/x/maplat_edgebound@v0.2.0/mod.ts";
 ```
 
 Note: The project includes a `deno.json` configuration file with import maps for dependencies. If you're using the module directly from source, you can also use the separate `import_map.json`:
@@ -52,15 +52,15 @@ deno run --import-map=import_map.json your_script.ts
 
 ### Browser
 
-Before installing Maplat EdgeRuler, you need to load the following prerequisite library:
+Before installing Maplat EdgeBound, you need to load the following prerequisite library:
 
 ```html
 <!-- Prerequisite library -->
 <script src="https://unpkg.com/delaunator/delaunator.min.js"></script>
 
 
-<!-- Then load Maplat EdgeRuler -->
-<script src="https://unpkg.com/@maplat/edgeruler/dist/maplat_edgeruler.umd.js"></script>
+<!-- Then load Maplat EdgeBound -->
+<script src="https://unpkg.com/@maplat/edgebound/dist/maplat_edgebound.umd.js"></script>
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ Before installing Maplat EdgeRuler, you need to load the following prerequisite 
 
 ```typescript
 import Delaunator from "delaunator";
-import EdgeRuler from "@maplat/edgeruler";
+import EdgeBound from "@maplat/edgebound";
 
 // Define point data
 const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
@@ -78,7 +78,7 @@ const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
 const del = Delaunator.from(points);
 
 // Create constrained triangulation
-const con = new EdgeRuler(del);
+const con = new EdgeBound(del);
 
 // Add a required edge (e.g., connecting vertex 0 and vertex 2)
 con.constrainOne(0, 2);
@@ -126,7 +126,7 @@ This algorithm is based on the following paper:
 
 ```typescript
 import Delaunator from "delaunator";
-import {Forbid} from "@maplat/edgeruler";
+import {Forbid} from "@maplat/edgebound";
 
 const del = Delaunator.from(points);
 const fbd = new Forbid(del);
@@ -151,7 +151,7 @@ Copyright (c) 2024 Code for History
 - The constraint algorithm is based on S. W. Sloan's paper
 - Uses [robust-predicates](https://github.com/mourner/robust-predicates) (a port of Jonathan Shewchuk's geometric computation algorithms)
 
-We welcome your contributions! Feel free to submit [issues and pull requests](https://github.com/code4history/MaplatEdgeRuler/issues).
+We welcome your contributions! Feel free to submit [issues and pull requests](https://github.com/code4history/MaplatEdgebound/issues).
 
 
 

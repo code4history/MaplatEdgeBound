@@ -1,6 +1,6 @@
 # 拡張仕様
 
-EdgeRulerは、[Delaunator](https://github.com/mapbox/delaunator)を三角網生成エンジンとして、様々な制約を含んだ三角網を実現する。
+EdgeBoundは、[Delaunator](https://github.com/mapbox/delaunator)を三角網生成エンジンとして、様々な制約を含んだ三角網を実現する。
 
 ## 当初機能
 

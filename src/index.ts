@@ -1,5 +1,5 @@
 /**
- * @maplat/edgeruler - A library for dual-constraining a Delaunator triangulation
+ * @maplat/edgebound - A library for dual-constraining a Delaunator triangulation
  * 
  * This is the main entry point for the library.
  * Currently exports the Constrain class for edge-constrained triangulation.

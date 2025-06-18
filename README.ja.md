@@ -1,6 +1,6 @@
-# MaplatEdgeRuler
+# MaplatEdgebound
 
-Maplat EdgeRulerは、[Delaunator](https://github.com/mapbox/delaunator)を基盤として、様々な制約を含んだ三角網を生成するためのライブラリです。
+Maplat EdgeBoundは、[Delaunator](https://github.com/mapbox/delaunator)を基盤として、様々な制約を含んだ三角網を生成するためのライブラリです。
 
 English README is [here](./README.md).
 
@@ -19,7 +19,7 @@ English README is [here](./README.md).
 
 ```sh
 # メインパッケージのインストール
-npm install @maplat/edgeruler
+npm install @maplat/edgebound
 
 # 利用に必要な前提パッケージをインストール
 npm install delaunator
@@ -29,19 +29,19 @@ npm install delaunator
 
 ```sh
 # Deno向け
-deno add @maplat/edgeruler
+deno add @maplat/edgebound
 
 # npm/Node.js向け
-npx jsr add @maplat/edgeruler
+npx jsr add @maplat/edgebound
 npm install delaunator  # ピア依存関係
 ```
 
 ### Deno
 
 ```typescript
-import EdgeRuler from "https://deno.land/x/maplat_edgeruler/mod.ts";
+import EdgeBound from "https://deno.land/x/maplat_edgebound/mod.ts";
 // または特定のバージョンから
-// import EdgeRuler from "https://deno.land/x/maplat_edgeruler@v0.2.0/mod.ts";
+// import EdgeBound from "https://deno.land/x/maplat_edgebound@v0.2.0/mod.ts";
 ```
 
 注意: プロジェクトには依存関係のインポートマップを含む`deno.json`設定ファイルが含まれています。ソースから直接モジュールを使用する場合は、別の`import_map.json`も使用できます：
@@ -52,15 +52,15 @@ deno run --import-map=import_map.json your_script.ts
 
 ### ブラウザ
 
-Maplat EdgeRulerをインストールする前に、以下の前提ライブラリを読み込んでおく必要があります。
+Maplat EdgeBoundをインストールする前に、以下の前提ライブラリを読み込んでおく必要があります。
 
 ```html
 <!-- 前提ライブラリ -->
 <script src="https://unpkg.com/delaunator/delaunator.min.js"></script>
 
 
-<!-- そしてMaplat EdgeRulerをロード -->
-<script src="https://unpkg.com/@maplat/edgeruler/dist/maplat_edgeruler.umd.js"></script>
+<!-- そしてMaplat EdgeBoundをロード -->
+<script src="https://unpkg.com/@maplat/edgebound/dist/maplat_edgebound.umd.js"></script>
 ```
 
 ## 使い方
@@ -69,7 +69,7 @@ Maplat EdgeRulerをインストールする前に、以下の前提ライブラ�
 
 ```typescript
 import Delaunator from "delaunator";
-import EdgeRuler from "@maplat/edgeruler";
+import EdgeBound from "@maplat/edgebound";
 
 // 点群データの定義
 const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
@@ -78,7 +78,7 @@ const points = [[150, 50], [50, 200], [150, 350], [250, 200]];
 const del = Delaunator.from(points);
 
 // 制約付き三角網の生成
-const con = new EdgeRuler(del);
+const con = new EdgeBound(del);
 
 // 必須エッジの追加（例：頂点0と頂点2を結ぶエッジ）
 con.constrainOne(0, 2);
@@ -126,7 +126,7 @@ const constrainedDel = con.del;
 
 ```typescript
 import Delaunator from "delaunator";
-import {Forbid} from "@maplat/edgeruler";
+import {Forbid} from "@maplat/edgebound";
 
 const del = Delaunator.from(points);
 const fbd = new Forbid(del);
@@ -151,7 +151,7 @@ Copyright (c) 2024 Code for History
 - 制約アルゴリズムは S. W. Sloan の論文を参考にしています
 - [robust-predicates](https://github.com/mourner/robust-predicates) (Jonathan Shewchukの幾何計算アルゴリズムのポート) を使用しています
 
-あなたの貢献をお待ちしています！[イシューやプルリクエスト](https://github.com/code4history/MaplatEdgeRuler/issues)は大歓迎です。
+あなたの貢献をお待ちしています！[イシューやプルリクエスト](https://github.com/code4history/MaplatEdgebound/issues)は大歓迎です。
 
 
 

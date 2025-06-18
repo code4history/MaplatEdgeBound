@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EdgeRuler Integration-Based Unit Tests > Complex Operations > should handle sequence of operations from integration test > operation-sequence-results 1`] = `
+exports[`EdgeBound Integration-Based Unit Tests > Complex Operations > should handle sequence of operations from integration test > operation-sequence-results 1`] = `
 [
   {
     "result": 2,
@@ -135,11 +135,11 @@ exports[`EdgeRuler Integration-Based Unit Tests > Complex Operations > should ha
 ]
 `;
 
-exports[`EdgeRuler Integration-Based Unit Tests > Edge Cases > should handle almost-collinear points correctly > almost-collinear-constraint-result 1`] = `-1`;
+exports[`EdgeBound Integration-Based Unit Tests > Edge Cases > should handle almost-collinear points correctly > almost-collinear-constraint-result 1`] = `-1`;
 
-exports[`EdgeRuler Integration-Based Unit Tests > Edge Cases > should handle near-but-valid points > near-valid-constraint-result 1`] = `-1`;
+exports[`EdgeBound Integration-Based Unit Tests > Edge Cases > should handle near-but-valid points > near-valid-constraint-result 1`] = `-1`;
 
-exports[`EdgeRuler Integration-Based Unit Tests > State Transitions > should maintain correct edge states through operations > edge-state-transitions 1`] = `
+exports[`EdgeBound Integration-Based Unit Tests > State Transitions > should maintain correct edge states through operations > edge-state-transitions 1`] = `
 [
   {
     "edge01": 2,
@@ -159,7 +159,7 @@ exports[`EdgeRuler Integration-Based Unit Tests > State Transitions > should mai
 ]
 `;
 
-exports[`EdgeRuler Integration-Based Unit Tests > State Transitions > should record state changes during constraint operation > state-after-constraint 1`] = `
+exports[`EdgeBound Integration-Based Unit Tests > State Transitions > should record state changes during constraint operation > state-after-constraint 1`] = `
 {
   "halfedges": [
     5,

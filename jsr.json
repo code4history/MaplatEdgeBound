@@ -1,12 +1,12 @@
 {
-  "name": "@maplat/edgeruler",
+  "name": "@maplat/edgebound",
   "version": "0.2.1",
   "exports": "./src/index.ts",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/code4history/MaplatEdgeRuler.git"
+    "url": "https://github.com/code4history/MaplatEdgebound.git"
   },
   "keywords": [
     "triangulation",

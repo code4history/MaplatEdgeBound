@@ -1,4 +1,4 @@
-// edge-ruler.snapshot.test.ts
+// edge-bound.snapshot.test.ts
 /**
  * このテストファイルは状態変化のスナップショットを記録し、
  * システム全体の振る舞いを検証することを目的としています。
@@ -6,7 +6,7 @@
  * ユニットテストは edge-ruler.unit.test.ts にあります。
  */
 import { describe, it, expect, beforeEach } from 'vitest';
-import EdgeRuler from '../src/variant/constrain';
+import EdgeBound from '../src/variant/constrain';
 import Delaunator from 'delaunator';
 
 // 型定義を追加
@@ -22,16 +22,16 @@ interface OperationResult {
   error?: string;
 }
 
-describe('EdgeRuler Integration-Based Unit Tests', () => {
+describe('EdgeBound Integration-Based Unit Tests', () => {
   const samplePoints = [[150, 50], [50, 200], [150, 350], [250, 200]];
   
   describe('State Transitions', () => {
-    let ruler: EdgeRuler;
+    let ruler: EdgeBound;
     let del: Delaunator<Float64Array>;
     
     beforeEach(() => {
       del = Delaunator.from(samplePoints);
-      ruler = new EdgeRuler(del);
+      ruler = new EdgeBound(del);
     });
 
     it('should record state changes during constraint operation', () => {
@@ -83,7 +83,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
   describe('Complex Operations', () => {
     it('should handle sequence of operations from integration test', () => {
       const del = Delaunator.from(samplePoints);
-      const ruler = new EdgeRuler(del);
+      const ruler = new EdgeBound(del);
 
       const operations = [
         () => ruler.constrainOne(0, 2),
@@ -126,7 +126,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
         [3, 0.002]
       ];
       const del = Delaunator.from(almostCollinearPoints);
-      const ruler = new EdgeRuler(del);
+      const ruler = new EdgeBound(del);
   
       const result = ruler.constrainOne(0, 2);
       expect(result).toMatchSnapshot('almost-collinear-constraint-result');
@@ -141,7 +141,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
         [1, 1]
       ];
       const del = Delaunator.from(nearButValidPoints);
-      const ruler = new EdgeRuler(del);
+      const ruler = new EdgeBound(del);
   
       const result = ruler.constrainOne(0, 2);
       expect(result).toMatchSnapshot('near-valid-constraint-result');
@@ -152,7 +152,7 @@ describe('EdgeRuler Integration-Based Unit Tests', () => {
       const collinearPoints = [[0, 0], [1, 1], [2, 2], [3, 3]];
       const del = Delaunator.from(collinearPoints);
       
-      expect(() => new EdgeRuler(del))
+      expect(() => new EdgeBound(del))
         .toThrow('No edges in triangulation');
     });
   });

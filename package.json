@@ -1,5 +1,5 @@
 {
-  "name": "@maplat/edgeruler",
+  "name": "@maplat/edgebound",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -7,15 +7,15 @@
   "version": "0.2.1",
   "description": "A small library for dual-constraining a Delaunator triangulation",
   "type": "module",
-  "main": "./dist/maplat_edgeruler.cjs",
-  "module": "./dist/maplat_edgeruler.js",
-  "browser": "./dist/maplat_edgeruler.umd.js",
+  "main": "./dist/maplat_edgebound.cjs",
+  "module": "./dist/maplat_edgebound.js",
+  "browser": "./dist/maplat_edgebound.umd.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/maplat_edgeruler.js",
-      "require": "./dist/maplat_edgeruler.cjs",
-      "browser": "./dist/maplat_edgeruler.umd.js",
+      "import": "./dist/maplat_edgebound.js",
+      "require": "./dist/maplat_edgebound.cjs",
+      "browser": "./dist/maplat_edgebound.umd.js",
       "types": "./dist/index.d.ts"
     }
   },
@@ -45,14 +45,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code4history/MaplatEdgeRuler.git"
+    "url": "git+https://github.com/code4history/MaplatEdgebound.git"
   },
   "author": "Code for History",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/code4history/MaplatEdgeRuler/issues"
+    "url": "https://github.com/code4history/MaplatEdgebound/issues"
   },
-  "homepage": "https://github.com/code4history/MaplatEdgeRuler#readme",
+  "homepage": "https://github.com/code4history/MaplatEdgebound#readme",
   "keywords": [
     "triangulation",
     "GIS",
