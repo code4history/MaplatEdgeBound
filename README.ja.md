@@ -25,29 +25,10 @@ npm install @maplat/edgebound
 npm install delaunator
 ```
 
-### JSR (JavaScript Registry)
+### ブラウザ
 
-```sh
-# Deno向け
-deno add @maplat/edgebound
-
-# npm/Node.js向け
-npx jsr add @maplat/edgebound
-npm install delaunator  # ピア依存関係
-```
-
-### Deno
-
-```typescript
-import EdgeBound from "https://deno.land/x/maplat_edgebound/mod.ts";
-// または特定のバージョンから
-// import EdgeBound from "https://deno.land/x/maplat_edgebound@v0.2.0/mod.ts";
-```
-
-注意: プロジェクトには依存関係のインポートマップを含む`deno.json`設定ファイルが含まれています。ソースから直接モジュールを使用する場合は、別の`import_map.json`も使用できます：
-
-```bash
-deno run --import-map=import_map.json your_script.ts
+```html
+<script src="https://unpkg.com/@maplat/edgebound/dist/maplat_edgebound.umd.js"></script>
 ```
 
 ### ブラウザ

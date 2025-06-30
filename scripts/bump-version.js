@@ -41,8 +41,30 @@ console.log(`Bumping version from ${currentVersion} to ${newVersion}`);
 packageJson.version = newVersion;
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + '\n');
 
-// Run sync-version to update other files
-console.log('Syncing version across all files...');
-execSync('node scripts/sync-version.js', { stdio: 'inherit', cwd: rootDir });
+// Update README files
+const readmePath = path.join(rootDir, 'README.md');
+const readmeJaPath = path.join(rootDir, 'README.ja.md');
+
+// Update version in README.md
+if (fs.existsSync(readmePath)) {
+  let readmeContent = fs.readFileSync(readmePath, 'utf8');
+  readmeContent = readmeContent.replace(
+    /npm install @maplat\/edgebound@[\d.]+/g,
+    `npm install @maplat/edgebound@${newVersion}`
+  );
+  fs.writeFileSync(readmePath, readmeContent);
+  console.log('Updated README.md');
+}
+
+// Update version in README.ja.md
+if (fs.existsSync(readmeJaPath)) {
+  let readmeJaContent = fs.readFileSync(readmeJaPath, 'utf8');
+  readmeJaContent = readmeJaContent.replace(
+    /npm install @maplat\/edgebound@[\d.]+/g,
+    `npm install @maplat/edgebound@${newVersion}`
+  );
+  fs.writeFileSync(readmeJaPath, readmeJaContent);
+  console.log('Updated README.ja.md');
+}
 
 console.log(`Version bumped to ${newVersion}`);

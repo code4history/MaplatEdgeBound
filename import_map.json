@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "@/": "./src/",
-    "robust-predicates": "https://esm.sh/robust-predicates@3.0.2"
-  }
-}
