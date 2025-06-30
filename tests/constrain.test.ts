@@ -9,22 +9,22 @@ type P2 = [number, number];
 describe('Constrainautor', () => {
   describe('Constructor Tests', () => {
     it('should throw on no argument', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor without arguments
       expect(() => new Constrainautor()).toThrow(/Expected an object with Delaunator output/);
     });
 
     it('should throw on empty object', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with empty object
       expect(() => new Constrainautor({})).toThrow(/Expected an object with Delaunator output/);
     });
 
     it('should throw on invalid object', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with invalid object
       expect(() => new Constrainautor({foo: 12})).toThrow(/Expected an object with Delaunator output/);
     });
 
     it('should throw on inconsistent Delaunation (triangles)', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with inconsistent triangles
       expect(() => new Constrainautor({
         triangles: [1], 
         halfedges: [1], 
@@ -33,7 +33,7 @@ describe('Constrainautor', () => {
     });
 
     it('should throw on inconsistent Delaunation (halfedges)', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with inconsistent halfedges
       expect(() => new Constrainautor({
         triangles: [1, 2, 3], 
         halfedges: [1], 
@@ -42,7 +42,7 @@ describe('Constrainautor', () => {
     });
 
     it('should throw on inconsistent Delaunation (coords)', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with inconsistent coords
       expect(() => new Constrainautor({
         triangles: [1, 2, 3], 
         halfedges: [0, 1, 2], 
@@ -51,7 +51,7 @@ describe('Constrainautor', () => {
     });
 
     it('should throw on empty Delaunation', () => {
-      // @ts-ignore
+      // @ts-expect-error Testing constructor with empty Delaunation
       expect(() => new Constrainautor({
         triangles: [], 
         halfedges: [], 
